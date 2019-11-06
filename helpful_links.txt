@@ -1,0 +1,35 @@
+#Great resource for labs based on the Well-Architected Framework
+https://github.com/awslabs/aws-well-architected-labs
+
+#Auto Scaling Launch Templates
+https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html
+
+#Best Practices for Auto Scaling
+https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html
+
+#AWS NLB Hyperplane
+https://www.youtube.com/watch?v=dfEcd3zqPOA&feature=youtu.be&t=4661
+https://www.slideshare.net/AmazonWebServices/amazon-vpc-security-at-the-speed-of-light-net313-aws-reinvent-2018
+
+#Application Load Balancer SNI and SmartSelection
+https://aws.amazon.com/blogs/aws/new-application-load-balancer-sni/
+
+#ALB Listener Rule types
+https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#rule-action-types
+
+#EBS Volume metrics and limits
+https://ec2instances.info/
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html
+
+#S3 performance optimization
+https://docs.aws.amazon.com/AmazonS3/latest/dev/optimizing-performance.html
+
+#AWS Aurora storage engine details
+https://aws.amazon.com/blogs/database/introducing-the-aurora-storage-engine/
+
+#Aurora improvements over RDS
+https://aws.amazon.com/blogs/aws/amazon-aurora-backtrack-turn-back-time/
+https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html
+
+#AWS Backup Vault access policies
+https://docs.aws.amazon.com/aws-backup/latest/devguide/creating-a-vault-access-policy.html
