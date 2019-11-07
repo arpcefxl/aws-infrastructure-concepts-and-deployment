@@ -9,7 +9,7 @@ Resources:
       EnableDnsSupport: true
       Tags:
         - Key: Name
-          Value: demo-vpc1
+          Value: demo-vpc2
   PublicSubnet1:
     Type: 'AWS::EC2::Subnet'
     Properties:
