@@ -18,17 +18,11 @@ resource "aws_vpc" "vpc1" {
   cidr_block = "${var.cidr1_vpc}"
   enable_dns_support   = true
   enable_dns_hostnames = true
-  tags {
-    Environment = "${var.environment1_tag}"
-  }
   provider = "aws.region"
 }
 
 resource "aws_internet_gateway" "igw1" {
   vpc_id = "${aws_vpc.vpc1.id}"
-  tags {
-    Environment = "${var.environment1_tag}"
-  }
   provider = "aws.region"
 }
 
@@ -37,9 +31,6 @@ resource "aws_subnet" "subnet1_public" {
   cidr_block = "${var.cidr1_subnet}"
   map_public_ip_on_launch = "true"
   availability_zone = "${var.availability_zone}"
-  tags {
-    Environment = "${var.environment1_tag}"
-  }
   provider = "aws.region"
 }
 
@@ -48,9 +39,6 @@ resource "aws_route_table" "rtb1_public" {
 route {
       cidr_block = "0.0.0.0/0"
       gateway_id = "${aws_internet_gateway.igw1.id}"
-  }
-tags {
-    Environment = "${var.environment1_tag}"
   }
   provider = "aws.region"
 }
@@ -75,9 +63,6 @@ resource "aws_security_group" "ssh_from_home1" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-  }
-  tags {
-    Environment = "${var.environment1_tag}"
   }
   provider = "aws.region"
 }
