@@ -1,0 +1,6 @@
+Deploy the VPCs and instances via Terraform
+Create transit gateway (takes a few mins)
+Create transit gateway attachments to both VPCs (takes a few mins)
+Create route table entries in each VPC to route traffic
+Modify security groups to allow inbound from remote vpc
+SSH to one instance, and ping the other across the Transit Gateway
