@@ -1,0 +1,2 @@
+#Run the following command to generate the json skeleton
+aws ec2 run-instances --generate-cli-skeleton > run-instances.json
