@@ -19,7 +19,7 @@ resource "aws_vpc" "vpc1" {
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags {
-    "Environment" = "${var.environment1_tag}"
+    Environment = "${var.environment1_tag}"
   }
   provider = "aws.region"
 }
