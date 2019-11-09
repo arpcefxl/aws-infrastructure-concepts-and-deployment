@@ -27,7 +27,7 @@ resource "aws_vpc" "vpc1" {
 resource "aws_internet_gateway" "igw1" {
   vpc_id = "${aws_vpc.vpc1.id}"
   tags {
-    "Environment" = "${var.environment1_tag}"
+    Environment = "${var.environment1_tag}"
   }
   provider = "aws.region"
 }
@@ -38,7 +38,7 @@ resource "aws_subnet" "subnet1_public" {
   map_public_ip_on_launch = "true"
   availability_zone = "${var.availability_zone}"
   tags {
-    "Environment" = "${var.environment1_tag}"
+    Environment = "${var.environment1_tag}"
   }
   provider = "aws.region"
 }
@@ -50,7 +50,7 @@ route {
       gateway_id = "${aws_internet_gateway.igw1.id}"
   }
 tags {
-    "Environment" = "${var.environment1_tag}"
+    Environment = "${var.environment1_tag}"
   }
   provider = "aws.region"
 }
@@ -77,7 +77,7 @@ resource "aws_security_group" "ssh_from_home1" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags {
-    "Environment" = "${var.environment1_tag}"
+    Environment = "${var.environment1_tag}"
   }
   provider = "aws.region"
 }
