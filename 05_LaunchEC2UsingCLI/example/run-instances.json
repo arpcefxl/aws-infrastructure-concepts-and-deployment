@@ -11,7 +11,7 @@
         "sg-07974c9f523609b68"
     ], 
     "SubnetId": "subnet-cbc0c1e5", 
-    "UserData": "", 
+    "UserData": "#!/bin/bash\nyum -y install httpd\n/usr/sbin/apachectl start", 
     "DryRun": false, 
     "IamInstanceProfile": {
         "Name": "ec2-admin-role"

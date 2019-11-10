@@ -1,20 +1,20 @@
 {
-    "ImageId": "ami-00dc79254d0461090", 
-    "InstanceType": "t2.micro", 
-    "KeyName": "csmithaws", 
+    "ImageId": "AMIID", 
+    "InstanceType": "INSTANCETYPE", 
+    "KeyName": "KEYNAME", 
     "MaxCount": 1, 
     "MinCount": 1, 
     "Placement": {
-        "AvailabilityZone": "us-east-1d"
+        "AvailabilityZone": "AZ"
     }, 
     "SecurityGroupIds": [
-        "sg-07974c9f523609b68"
+        "SGID"
     ], 
-    "SubnetId": "subnet-cbc0c1e5", 
-    "UserData": "#!/bin/bash\nyum -y install httpd\n/usr/sbin/apachectl start", 
+    "SubnetId": "SUBNETID", 
+    "UserData": "USERDATASCRIPT", 
     "DryRun": false, 
     "IamInstanceProfile": {
-        "Name": "ec2-admin-role"
+        "Name": "IAMROLENAME"
     }, 
     "InstanceInitiatedShutdownBehavior": "terminate"
 }
