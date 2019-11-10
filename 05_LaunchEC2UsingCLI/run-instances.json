@@ -1,0 +1,20 @@
+{
+    "ImageId": "AMI", 
+    "InstanceType": "INSTANCE_TYPE", 
+    "KeyName": "KEYNAME", 
+    "MaxCount": 1, 
+    "MinCount": 1, 
+    "Placement": {
+        "AvailabilityZone": "AZ"
+    }, 
+    "SecurityGroupIds": [
+        "SGID"
+    ], 
+    "SubnetId": "SUBNETID", 
+    "UserData": "", 
+    "DryRun": false, 
+    "IamInstanceProfile": {
+        "Name": "IAMPROFILENAME"
+    }, 
+    "InstanceInitiatedShutdownBehavior": "terminate"
+}

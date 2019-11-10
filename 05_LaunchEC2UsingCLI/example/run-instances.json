@@ -1,0 +1,20 @@
+{
+    "ImageId": "ami-00dc79254d0461090", 
+    "InstanceType": "t2.micro", 
+    "KeyName": "csmithaws", 
+    "MaxCount": 1, 
+    "MinCount": 1, 
+    "Placement": {
+        "AvailabilityZone": "us-east-1d"
+    }, 
+    "SecurityGroupIds": [
+        "sg-07974c9f523609b68"
+    ], 
+    "SubnetId": "subnet-cbc0c1e5", 
+    "UserData": "", 
+    "DryRun": false, 
+    "IamInstanceProfile": {
+        "Name": "ec2-admin-role"
+    }, 
+    "InstanceInitiatedShutdownBehavior": "terminate"
+}
