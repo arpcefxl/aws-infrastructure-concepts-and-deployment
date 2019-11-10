@@ -1,2 +1,3 @@
 #Running the following command will execute "uname -a" on all instances with a tag key value of "ssm" and a tag value of "true"
+#If you add tags to an instance AFTER launch, you will need to update the sm-agent (can be done from the AWS console in SSM->Managed Instances)
 aws ssm send-command --document-name "AWS-RunShellScript" --document-version "1" --targets '[{"Key":"tag:ssm","Values":["true"]}]' --parameters '{"workingDirectory":[""],"executionTimeout":["3600"],"commands":["uname -a"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region REGION
