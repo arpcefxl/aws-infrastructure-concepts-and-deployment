@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "description": "Execute linux commands for inventory purposes.",
+  "runtimeConfig": {
+    "aws:runShellScript": {
+      "properties": [
+        {
+          "id": "0.aws:runShellScript",
+          "runCommand": [
+            "#!/bin/bash",
+            "uname -a",
+            "uptime",
+            "cat /proc/cpuinfo"
+          ]
+        }
+      ]
+    }
+  }
+}
