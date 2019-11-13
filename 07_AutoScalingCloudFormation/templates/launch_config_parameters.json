@@ -1,0 +1,18 @@
+[
+  {
+    "ParameterKey": "AMIID",
+    "ParameterValue": "ami-019e9f4934d2d0cb9"
+  }, 
+  {
+    "ParameterKey": "INSTANCETYPE",
+    "ParameterValue": "t2.micro"
+  },
+  {
+    "ParameterKey": "KEYNAME",
+    "ParameterValue": "csmithaws"
+  }, 
+  {
+    "ParameterKey": "SGID",
+    "ParameterValue": "sg-07974c9f523609b68"
+  }
+]

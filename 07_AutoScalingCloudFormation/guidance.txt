@@ -1,0 +1,2 @@
+#To create the launch config stack, modify launch_config_parameters.json to taste, then execute the following:
+aws --profile PROFILENAME cloudformation create-stack --stack-name demo-launch-template --template-body file://launch_config.yaml --parameters file://launch_config_parameters.json --region us-east-1

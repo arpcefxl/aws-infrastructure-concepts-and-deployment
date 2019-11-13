@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: 'Launch Template for Demo ASG'
+
+Parameters: 
+  AMIID: 
+    Type: "AWS::EC2::Image::Id"
+  INSTANCETYPE: 
+    Type: String
+  KEYNAME: 
+    Type : "AWS::EC2::KeyPair::KeyName"
+  SGID: 
+    Type: List<AWS::EC2::SecurityGroup::Id>
+
+Resources:
+  LT:
+    Type: 'AWS::EC2::LaunchTemplate'
+    Properties: 
+      LaunchTemplateData: 
+        ImageId:
+          Ref: AMIID
+        InstanceType:
+          Ref: INSTANCETYPE
+        KeyName: 
+          Ref: KEYNAME
+        SecurityGroupIds: 
+          Ref: SGID
+      LaunchTemplateName: 'DemoLaunchTemplate'

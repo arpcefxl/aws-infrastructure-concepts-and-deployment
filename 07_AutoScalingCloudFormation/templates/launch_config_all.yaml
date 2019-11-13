@@ -1,0 +1,46 @@
+Type: AWS::EC2::LaunchTemplate
+Properties: 
+  LaunchTemplateData: 
+    LaunchTemplateData
+  BlockDeviceMappings: 
+    - BlockDeviceMapping
+  CapacityReservationSpecification: 
+    CapacityReservationSpecification
+  CpuOptions: 
+    CpuOptions
+  CreditSpecification: 
+    CreditSpecification
+  DisableApiTermination: Boolean
+  EbsOptimized: Boolean
+  ElasticGpuSpecifications: 
+    - ElasticGpuSpecification
+  ElasticInferenceAccelerators: 
+    - LaunchTemplateElasticInferenceAccelerator
+  HibernationOptions: 
+    HibernationOptions
+  IamInstanceProfile: 
+    IamInstanceProfile
+  ImageId: String
+  InstanceInitiatedShutdownBehavior: String
+  InstanceMarketOptions: 
+    InstanceMarketOptions
+  InstanceType: String
+  KernelId: String
+  KeyName: String
+  LicenseSpecifications: 
+    - LicenseSpecification
+  Monitoring: 
+    Monitoring
+  NetworkInterfaces: 
+    - NetworkInterface
+  Placement: 
+    Placement
+  RamDiskId: String
+  SecurityGroupIds: 
+    - String
+  SecurityGroups: 
+    - String
+  TagSpecifications: 
+    - TagSpecification
+  UserData: String
+  LaunchTemplateName: String
