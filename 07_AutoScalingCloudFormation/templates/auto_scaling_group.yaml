@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: 'Auto Scaling Group for Demo ASG'
+
+Parameters:
+  LAUNCHTEMPLATE:
+    Type: String
+  LAUNCHTEMPLATEVERS:
+    Type: String
+  TARGETGROUP:
+    Type: String
+
+Resources:
+  ASG:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      AvailabilityZones:
+        Fn::GetAZs: ''
+      LaunchTemplate:
+        LaunchTemplateId: 
+          Ref: LAUNCHTEMPLATE
+        Version: 
+          Ref: LAUNCHTEMPLATEVERS
+      MinSize: '1'
+      MaxSize: '4'
+#      TargetGroupARNs:
+#        Ref: TARGETGROUP
+    UpdatePolicy: 
+      AutoScalingRollingUpdate: 
+        MinInstancesInService: "1"
+        MaxBatchSize: "1"
+        PauseTime: "PT5M"  

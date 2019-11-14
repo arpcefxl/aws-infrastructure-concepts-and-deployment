@@ -1,0 +1,14 @@
+[
+  {
+    "ParameterKey": "LAUNCHTEMPLATE",
+    "ParameterValue": "lt-007fca07731339477"
+  }, 
+  {
+    "ParameterKey": "LAUNCHTEMPLATEVERS",
+    "ParameterValue": "1"
+  }, 
+  {
+    "ParameterKey": "TARGETGROUP",
+    "ParameterValue": "x"
+  }
+]
