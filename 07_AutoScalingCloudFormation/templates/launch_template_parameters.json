@@ -1,7 +1,7 @@
 [
   {
     "ParameterKey": "AMIID",
-    "ParameterValue": "ami-019e9f4934d2d0cb9"
+    "ParameterValue": "ami-02f2ff782aeb2e459"
   }, 
   {
     "ParameterKey": "INSTANCETYPE",

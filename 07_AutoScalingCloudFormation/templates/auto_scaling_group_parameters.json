@@ -5,10 +5,18 @@
   }, 
   {
     "ParameterKey": "LAUNCHTEMPLATEVERS",
-    "ParameterValue": "1"
+    "ParameterValue": "2"
   }, 
   {
     "ParameterKey": "TARGETGROUP",
-    "ParameterValue": "x"
+    "ParameterValue": "arn:aws:elasticloadbalancing:us-east-1:615458447572:targetgroup/demo-targetgroup/f85a127fc9c26db0"
+  },
+  {
+    "ParameterKey": "TARGETVALUE",
+    "ParameterValue": "50"
+  }, 
+  {
+    "ParameterKey": "SUBNETLIST",
+    "ParameterValue": "subnet-7de82230, subnet-0a3c3b56, subnet-4c83b82b"
   }
 ]

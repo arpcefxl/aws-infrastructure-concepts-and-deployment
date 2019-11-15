@@ -8,13 +8,17 @@ Parameters:
     Type: String
   TARGETGROUP:
     Type: String
+  TARGETVALUE:
+    Type: String
+  SUBNETLIST:
+    Type: List<AWS::EC2::Subnet::Id>
 
 Resources:
   ASG:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
-      AvailabilityZones:
-        Fn::GetAZs: ''
+      VPCZoneIdentifier:
+        Ref: SUBNETLIST
       LaunchTemplate:
         LaunchTemplateId: 
           Ref: LAUNCHTEMPLATE
@@ -22,10 +26,19 @@ Resources:
           Ref: LAUNCHTEMPLATEVERS
       MinSize: '1'
       MaxSize: '4'
-#      TargetGroupARNs:
-#        Ref: TARGETGROUP
+      TargetGroupARNs:
+        [ Ref: TARGETGROUP ]
     UpdatePolicy: 
       AutoScalingRollingUpdate: 
         MinInstancesInService: "1"
         MaxBatchSize: "1"
         PauseTime: "PT5M"  
+  ASGPolicy:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AutoScalingGroupName: !Ref ASG
+      PolicyType: TargetTrackingScaling
+      TargetTrackingConfiguration:
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ASGAverageCPUUtilization
+        TargetValue: !Ref TARGETVALUE
