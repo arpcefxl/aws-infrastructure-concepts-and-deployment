@@ -7,6 +7,12 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchTemplates.html
 #Best Practices for Auto Scaling
 https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html
 
+#Auto Scaling in CloudFormation Links
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html
+https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html
+https://theburningmonk.com/cloudformation-ref-and-getatt-cheatsheet/
+
+
 #AWS NLB Hyperplane
 https://www.youtube.com/watch?v=dfEcd3zqPOA&feature=youtu.be&t=4661
 https://www.slideshare.net/AmazonWebServices/amazon-vpc-security-at-the-speed-of-light-net313-aws-reinvent-2018
