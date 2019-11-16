@@ -1,0 +1,2 @@
+#To create the load balancer initially, use a command similar to the following:
+aws --profile PROFILE elbv2 create-load-balancer --cli-input-json file://create_elbv2.json --region us-east-1

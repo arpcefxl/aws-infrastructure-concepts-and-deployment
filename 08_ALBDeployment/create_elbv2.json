@@ -1,0 +1,20 @@
+{
+    "Name": "demo-alb",
+    "Subnets": [
+        "subnet-7de82230",
+	"subnet-0a3c3b56",
+	"subnet-4c83b82b"
+    ],
+    "SecurityGroups": [
+        "sg-07974c9f523609b68"
+    ],
+    "Scheme": "internet-facing",
+    "Tags": [
+        {
+            "Key": "Name",
+            "Value": "demo-alb"
+        }
+    ],
+    "Type": "application",
+    "IpAddressType": "ipv4"
+}
