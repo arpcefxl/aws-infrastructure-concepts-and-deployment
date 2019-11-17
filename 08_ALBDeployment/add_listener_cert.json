@@ -1,0 +1,8 @@
+{
+    "ListenerArn": "LISTENER_ARN",
+    "Certificates": [
+        {
+            "CertificateArn": "arn:aws:acm:us-east-1:615458447572:certificate/939792cf-369e-4c0d-8b9c-be2f8b1d6de9"
+        }
+    ]
+}
