@@ -1,0 +1,10 @@
+#If you need to install the CloudWatch Agent on an instance, you can use a command similar to the following, after ensuring the instance is in the Systems Manager inventory and has an instance profile with correct CloudWatch Agent permissions.  The following command assumes you are executing the command on all instances with a tag of "ssm" and a value of "true"
+
+aws --profile PROFILE ssm send-command --document-name "AWS-ConfigureAWSPackage" --document-version "1" --targets '[{"Key":"tag:ssm","Values":["true"]}]' --parameters '{"action":["Install"],"installationType":["Uninstall and reinstall"],"version":[""],"name":["AmazonCloudWatchAgent"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region us-east-1
+
+#After install of CWA, if this is your first time using it in the account, you can ssh to the instance and execute the following to generate a default CWA config:
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+
+#Restart the CWA using the following:
+aws --profile PROFILE ssm send-command --document-name "AmazonCloudWatch-ManageAgent" --document-version "4" --targets '[{"Key":"tag:ssm","Values":["true"]}]' --parameters '{"action":["configure"],"mode":["ec2"],"optionalConfigurationSource":["ssm"],"optionalConfigurationLocation":["AmazonCloudWatch-linux"],"optionalRestart":["yes"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region us-east-1
+

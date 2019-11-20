@@ -1,0 +1,22 @@
+{
+  "Records":[
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:us-east-1:615458447572:demo-sns:25cd026a-7d54-4168-9611-8af8a7a48056",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "ccc3a53a-b809-53b9-975b-f37151cdb518",
+        "TopicArn": "arn:aws:sns:us-east-1:615458447572:demo-sns",
+        "Subject": "ALARM: demo-disk-check-alarm in US East (N. Virginia)",
+        "Message": "{\"AlarmName\":\"demo-disk-check-alarm\",\"AlarmDescription\":null,\"AWSAccountId\":\"615458447572\",\"NewStateValue\":\"ALARM\",\"NewStateReason\":\"Threshold Crossed: 1 out of the last 1 datapoints [28.69482374144672 (18/11/19 00:31:00)] was greater than the threshold (25.0) (minimum 1 datapoint for OK -> ALARM transition).\",\"StateChangeTime\":\"2019-11-18T00:36:20.878+0000\",\"Region\":\"US East (N. Virginia)\",\"OldStateValue\":\"OK\",\"Trigger\":{\"MetricName\":\"disk_used_percent\",\"Namespace\":\"CWAgent\",\"StatisticType\":\"Statistic\",\"Statistic\":\"AVERAGE\",\"Unit\":null,\"Dimensions\":[{\"value\":\"/mount\",\"name\":\"path\"},{\"value\":\"i-0e2bd39cc779bbe0b\",\"name\":\"InstanceId\"},{\"value\":\"ami-00dc79254d0461090\",\"name\":\"ImageId\"},{\"value\":\"t2.micro\",\"name\":\"InstanceType\"},{\"value\":\"xvdf\",\"name\":\"device\"},{\"value\":\"xfs\",\"name\":\"fstype\"}],\"Period\":300,\"EvaluationPeriods\":1,\"ComparisonOperator\":\"GreaterThanThreshold\",\"Threshold\":25.0,\"TreatMissingData\":\"- TreatMissingData:                    missing\",\"EvaluateLowSampleCountPercentile\":1}}",
+        "Timestamp": "2019-11-18T00:36:20.961Z",
+        "SignatureVersion": "1",
+        "Signature": "WR98tr9007GXXsp3fBana1lUiwRBLQ0iM8Ia1W6bzSFwUM1WIN9NMvkmxkb8yrnWq9jxkVMgm2M20NAteaVZscBvd1/qxct+ZBVFcD9AKt0HOboqVN/5Ca/JY4qFBhdhiLR79iaQO2hF2gjGaZy9KRL+z6oqNX+0uysyc9XmShfEtbqA9Se/3HEi1IByd31sXZOCtlIR1MUPTKVPuVmhTXiqfD8qi09ql9xl41BqbNTXRfXuToefABh7I1+XHVqu8zL5xZRll00hdD/h9emNjlf0zFFlYQyMu1Uwe++RBy+0rGLKbc82ldgzIpvojdhEVrew4pUekejYAcqSviJ/FA==",
+        "SigningCertUrl": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-6aad65c2f9911b05cd53efda11f913f9.pem",
+        "UnsubscribeUrl": "https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:615458447572:demo-sns:25cd026a-7d54-4168-9611-8af8a7a48056",
+        "MessageAttributes": {}
+        }
+      }
+    ]
+}
