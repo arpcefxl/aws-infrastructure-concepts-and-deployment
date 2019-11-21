@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Set all the variables
 PROFILE=
 BUCKET1=
 BUCKET2=
