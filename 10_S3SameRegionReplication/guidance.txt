@@ -1,0 +1,2 @@
+#First, edit the s3 creation script and populate the variables
+#Then, execute the S3 creation script to create buckets and generate test data

@@ -1,0 +1,66 @@
+{
+    "Bucket": "",
+    "ContentMD5": "",
+    "ReplicationConfiguration": {
+        "Role": "",
+        "Rules": [
+            {
+                "ID": "",
+                "Priority": 0,
+                "Prefix": "",
+                "Filter": {
+                    "Prefix": "",
+                    "Tag": {
+                        "Key": "",
+                        "Value": ""
+                    },
+                    "And": {
+                        "Prefix": "",
+                        "Tags": [
+                            {
+                                "Key": "",
+                                "Value": ""
+                            }
+                        ]
+                    }
+                },
+                "Status": "Disabled",
+                "SourceSelectionCriteria": {
+                    "SseKmsEncryptedObjects": {
+                        "Status": "Disabled"
+                    }
+                },
+                "ExistingObjectReplication": {
+                    "Status": "Disabled"
+                },
+                "Destination": {
+                    "Bucket": "",
+                    "Account": "",
+                    "StorageClass": "STANDARD",
+                    "AccessControlTranslation": {
+                        "Owner": "Destination"
+                    },
+                    "EncryptionConfiguration": {
+                        "ReplicaKmsKeyID": ""
+                    },
+                    "ReplicationTime": {
+                        "Status": "Enabled",
+                        "Time": {
+                            "Minutes": 0
+                        }
+                    },
+                    "Metrics": {
+                        "Status": "Disabled",
+                        "EventThreshold": {
+                            "Minutes": 0
+                        }
+                    }
+                },
+                "DeleteMarkerReplication": {
+                    "Status": "Enabled"
+                }
+            }
+        ]
+    },
+    "Token": ""
+}
