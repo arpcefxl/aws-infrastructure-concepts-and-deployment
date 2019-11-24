@@ -1,0 +1,3 @@
+#This demo is done entirely in the console but I still have some recommendations:
+
+#Change the engine type and version to see how you lose a LOT of Aurora features.  If you aren't running MySQL and the single recommended version, you cannot take advantage of all Aurora has to offer.
