@@ -1,0 +1,9 @@
+#After terraform is installed, cd into the terraform directory
+#and issue the following to deploy the infrastructure:
+
+terraform init
+terraform plan -out tf.out
+terraform apply tf.out
+
+#If you want to clean up and destroy all resources:
+terraform destroy
