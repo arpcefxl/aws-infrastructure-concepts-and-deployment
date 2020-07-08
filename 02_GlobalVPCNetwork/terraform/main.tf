@@ -3,7 +3,7 @@
 module "us-east-2_cloudformation" {
   source = "./us-east-2"
   providers = {
-    "aws.region" = "aws.us-east-2"
+    aws.region = aws.us-east-2
   }
   
 }
@@ -11,7 +11,7 @@ module "us-east-2_cloudformation" {
 module "ap-southeast-1_cloudformation" {
   source = "./ap-southeast-1"
   providers = {
-    "aws.region" = "aws.ap-southeast-1"
+    aws.region = aws.ap-southeast-1
   }
   
 }
@@ -19,7 +19,7 @@ module "ap-southeast-1_cloudformation" {
 module "eu-central-1_cloudformation" {
   source = "./eu-central-1"
   providers = {
-    "aws.region" = "aws.eu-central-1"
+    aws.region = aws.eu-central-1
   }
   
 }
