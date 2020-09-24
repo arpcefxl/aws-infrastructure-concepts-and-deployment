@@ -1,0 +1,116 @@
+sudo -s
+git clone https://github.com/arpcefxl/aws-infrastructure-concepts-and-deployment.git
+ls
+cd aws-infrastructure-concepts-and-deployment/
+ls
+cd 02_GlobalVPCNetwork/
+ls
+more terraform
+cp terraform_install_amazon_linux2.sh /tmp
+cd /tmp
+bash ./terraform_install_amazon_linux2.sh 
+terraform --version
+terraform -v
+cd -
+ls
+more guidance.txt 
+cd
+hiustory
+history
+w
+ls
+cd aws-infrastructure-concepts-and-deployment/
+ls
+cd 02_GlobalVPCNetwork/
+ls
+vi terraform_install_amazon_linux2.sh 
+terraform -v
+cd terraform/
+ls
+cd us-east-2/
+ls
+vi demo-vpc-us-east-2.yaml 
+cd ..
+ls
+cd ap-southeast-1/
+ls
+vi demo-vpc-ap-southeast-1.yaml 
+cd ..
+ls
+vi main.tf 
+vi provider.tf 
+cd us-east-2/
+ls
+vi main.tf 
+cd ..
+ls
+terraform init
+terraform plan
+ls
+ls -la
+ls -la .terraform/
+terraform apply
+cd ..
+ls
+vi guidance.txt 
+cd ../03_SharedVPCSubnets/
+ls
+cat guidance.txt 
+cd ../04_DeployTransitGateway/
+ls
+cd terraform/
+ls
+vi main.tf 
+vi variable.tf 
+vi aws_ami.tf 
+terraform init
+terraform plan
+terraform plan -out tf.out
+file tf.out
+terraform apply tf.out
+cd ..
+cd 05_LaunchEC2UsingCLI/
+ls ..
+ls
+cat guidance.txt 
+aws configure
+aws ec2 run-instances --generate-cli-skeleton
+ls
+vi run-instances.json 
+cd example/
+ls
+vi run-instances.json 
+aws ec2 run-instances --generate-cli-skeleton > test.json
+vi test.json 
+cd ..
+ls -la
+vi run-instances.json 
+cd example/
+ls
+vi run-instances.json 
+vi ../guidance.txt 
+ls
+cd ..
+ls
+cp userdata.sh example/
+cd example/
+ls
+vi run-instances.json 
+vi userdata.sh 
+aws ec2 run-instances --cli-input-json file://run-instances.json --user-data file://userdata.sh
+aws ssm send-command --document-name "AWS-RunShellScript" --document-version "1" --targets '[{"Key":"InstanceIds","Values":["i-0a2528ef36e2ca5cc","i-0dedeee13dac56032"]}]' --parameters '{"workingDirectory":[""],"executionTimeout":["3600"],"commands":["uptime","uname -a"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region us-east-1
+cd ..
+cd ../06_SSMRunCommandAndSessionManager/
+ls
+cat guidance.txt 
+history
+ls -la
+cat .bash_history 
+ls -la
+w
+ps -ef |grep ec2-user
+kill 3706
+w
+ls -la
+more .bash_
+more .bash_history 
