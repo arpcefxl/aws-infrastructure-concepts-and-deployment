@@ -1,0 +1,93 @@
+cd aws-infrastructure-concepts-and-deployment/
+ls
+cd 07_AutoScalingCloudFormation/
+ls
+cat guidance.txt 
+ls
+cd templates/
+ls
+vi launch_template_all.yaml 
+vi launch_template.yaml 
+vi launch_template_parameters.json 
+vi ../guidance.txt 
+aws cloudformation create-stack --stack-name demo-launch-template --template-body file://launch_template.yaml --parameters file://launch_template_parameters.json --region us-east-1
+ls
+vi auto_scaling_group.yaml 
+vi auto_scaling_group_parameters.json 
+vi ../guidance.txt 
+aws cloudformation help
+aws cloudformation validate-template help
+cat ../guidance.txt 
+aws cloudformation validate-template --template-body file://auto_scaling_group.yaml 
+vi ../guidance.txt 
+aws cloudformation create-stack --stack-name demo-autoscaling-group --template-body file://auto_scaling_group.yaml --parameters file://auto_scaling_group_parameters.json --region us-east-1
+cd ..
+cd ../08_ALBDeployment/
+ls
+vi guidance.txt 
+aws elb help
+aws elbv2 help
+vi guidance.txt 
+ls
+vi create_elbv2.json 
+cat guidance.txt 
+aws elbv2 create-load-balancer --cli-input-json file://create_elbv2.json --region us-east-1
+ls
+cat guidance.txt 
+vi create_https_listener.json 
+aws elbv2 create-listener --cli-input-json file://create_https_listener.json --region us-east-1
+ls
+cat guidance.txt 
+vi add_listener_cert.json 
+aws elbv2 add-listener-certificates --cli-input-json file://add_listener_cert.json --region us-east-1
+ls
+vi guidance.txt 
+ls -la
+vi create_http_listener.json 
+cat guidance.txt 
+aws elbv2 create-listener --cli-input-json file://create_http_listener.json --region us-east-1
+ps -ef |grep ec2-user
+kill 10226
+ps -ef
+w
+kill 10225
+w
+df -k
+ls /dev
+sudo -s
+ls
+cd aws-infrastructure-concepts-and-deployment/
+ls
+cd 09_EBSOperations/
+ls
+vi guidance.txt 
+aws ssm send-command --document-name "AWS-ConfigureAWSPackage" --document-version "1" --targets '[{"Key":"tag:ssm","Values":["true"]}]' --parameters '{"action":["Install"],"installationType":["Uninstall and reinstall"],"version":[""],"name":["AmazonCloudWatchAgent"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region us-east-1
+sudo reboot
+sudo -s
+aws ssm send-command --document-name "AWS-ConfigureAWSPackage" --document-version "1" --targets '[{"Key":"tag:ssm","Values":["true"]}]' --parameters '{"action":["Install"],"installationType":["Uninstall and reinstall"],"version":[""],"name":["AmazonCloudWatchAgent"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region us-east-1
+cd aws-infrastructure-concepts-and-deployment/
+cd 08_ALBDeployment/
+ls
+cd ../09_EBSOperations/
+ls
+cat guidance.txt 
+aws ssm send-command --document-name "AmazonCloudWatch-ManageAgent" --document-version "4" --targets '[{"Key":"tag:ssm","Values":["true"]}]' --parameters '{"action":["configure"],"mode":["ec2"],"optionalConfigurationSource":["ssm"],"optionalConfigurationLocation":["AmazonCloudWatch-linux"],"optionalRestart":["yes"]}' --timeout-seconds 600 --max-concurrency "50" --max-errors "0" --region us-east-1
+ls
+vi lambda-iam-role-access-policy.json 
+vi testevent.json 
+cd /test
+sudo -s
+cd 
+cd aws-infrastructure-concepts-and-deployment/
+ls
+cd 10_S3SameRegionReplication/
+ls
+vi create_s3_structure.sh 
+bash ./create_s3_structure.sh 
+ls -la
+aws s3api help
+aws s3api put-bucket-replication help
+ls
+vi put-bucket-replication.json 
+exit
+history
