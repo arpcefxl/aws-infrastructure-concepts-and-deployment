@@ -1,11 +1,9 @@
 #!/bin/bash
-#Quick commands to get Terraform installed on Amazon Linux 2
-#Should work on other Linux releases but this is the only version I tested
-#Copy and run from /tmp
-#Chad Smith - 11/06/2019
-wget https://releases.hashicorp.com/terraform/0.15.1/terraform_0.15.1_linux_amd64.zip
-unzip terraform_0.15.1_linux_amd64.zip
-sudo mv terraform /usr/local/bin/ && rm terraform_0.15.1_linux_amd64.zip
-sudo ln -s /usr/local/bin/terraform /usr/bin/
-terraform --version
+  
+cd /tmp
+TERRAFORM_VER=`curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest |  grep tag_name | cut -d: -f2 | tr -d \"\,\v | awk '{$1=$1};1'`
+wget https://releases.hashicorp.com/terraform/${TERRAFORM_VER}/terraform_${TERRAFORM_VER}_linux_amd64.zip
+sudo yum -y install unzip
+unzip terraform_${TERRAFORM_VER}_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
 

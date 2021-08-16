@@ -1,7 +1,7 @@
 #To create the launch config stack, modify launch_config_parameters.json to taste, then execute the following:
-aws --profile PROFILENAME cloudformation create-stack --stack-name demo-launch-template --template-body file://launch_template.yaml --parameters file://launch_template_parameters.json --region us-east-1
+aws cloudformation create-stack --stack-name demo-launch-template --template-body file://launch_template.yaml --parameters file://launch_template_parameters.json --region us-east-1
 
 #To create the auto scaling group, modify auto_scaling_group_parameters.json to taste (using above launch template, for example, then execute the following:
-aws --profile PROFILENAME cloudformation create-stack --stack-name demo-autoscaling-group --template-body file://auto_scaling_group.yaml --parameters file://auto_scaling_group_parameters.json --region us-east-1
+aws cloudformation create-stack --stack-name demo-autoscaling-group --template-body file://auto_scaling_group.yaml --parameters file://auto_scaling_group_parameters.json --region us-east-1
 
 #If you want to update either stack, run the same command, substituting create-stack with update-stack. Even if you just change parameters and keep the template the same, it will update appropriately
