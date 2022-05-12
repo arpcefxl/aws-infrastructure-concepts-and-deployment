@@ -71,7 +71,8 @@ resource "aws_instance" "test1" {
   vpc_security_group_ids = ["${aws_security_group.ssh_from_home1.id}"]
   key_name = "csmithaws"
   tags = {
-    Name = "vpc1"
+    Name = "vpc1",
+    costcenter = "demo"
   }
 }
 resource "aws_vpc" "vpc2" {
@@ -143,6 +144,7 @@ resource "aws_instance" "test2" {
   vpc_security_group_ids = ["${aws_security_group.ssh_from_home2.id}"]
   key_name = "csmithaws"
   tags = {
-    Name = "vpc2"
+    Name = "vpc2",
+    costcenter = "demo"
   }
 }
