@@ -2,4 +2,5 @@
 aws ec2 run-instances --region REGION --generate-cli-skeleton > run-instances.json
 
 #Run the following to launch the instance with an external userdata script
+#Move the userdata.sh script into the example dir
 aws ec2 run-instances --region REGION --cli-input-json file://run-instances.json --user-data file://userdata.sh
