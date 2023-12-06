@@ -4,7 +4,7 @@
     "Port": 443,
     "Certificates": [
         {
-            "CertificateArn": "arn:aws:acm:us-east-1:615458447572:certificate/60a12b8f-1d51-4ff4-9278-5c50d8589e4e"
+            "CertificateArn": "arn:aws:acm:us-east-1:615458447572:certificate/f842c2fc-3372-4965-8835-4fe080e807ac"
         }
     ],
     "DefaultActions": [
